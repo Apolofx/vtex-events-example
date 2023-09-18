@@ -31,13 +31,32 @@
   "credentialType": "absolute",
   "policies": [
     {
+      "name": "OMSViewer"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "*.vtexcommercestable.com.br",
+        "path": "/api/oms/pvt/*"
+      }
+    },
+    {
+      "name": "SaveOrderFormConfiguration"
+    },
+    {
+      "name": "PaymentAction"
+    },
+    {
+      "name": "FeedHookV3Admin"
+    },
+    {
+      "name": "read-write-apps-settings"
+    },
+    {
       "name": "colossus-fire-event"
     },
     {
       "name": "colossus-write-logs"
-    },
-    {
-      "name": "vbase-read-write"
     }
   ],
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"

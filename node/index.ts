@@ -40,7 +40,6 @@ export default new Service<IOClients, State, ParamsContext>({
   },
   routes: {
     hcheck: (ctx: any) => {
-      // setCacheContext(ctx)
       ctx.set('Cache-Control', 'no-cache')
       ctx.status = 200
       ctx.body = 'ok'
