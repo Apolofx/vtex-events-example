@@ -1,0 +1,44 @@
+{
+  "name": "events-example",
+  "vendor": "vtex",
+  "version": "0.0.1",
+  "title": "Events Example",
+  "description": "Reference app for VTEX IO Services",
+  "dependencies": {},
+  "settingsSchema": {
+    "title": "events-example",
+    "type": "object",
+    "properties": {
+      "storeName": {
+        "title": "Store name",
+        "description": "Enter your store's name",
+        "type": "string"
+      },
+      "contactEmail": {
+        "title": "Contact email",
+        "description": "Enter your email",
+        "type": "string"
+      }
+    }
+  },
+  "builders": {
+    "node": "6.x",
+    "docs": "0.x"
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    },
+    {
+      "name": "vbase-read-write"
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}
